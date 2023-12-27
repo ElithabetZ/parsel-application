@@ -1,10 +1,7 @@
 package com.pingwit.parsel.entity;
 
 import com.pingwit.parsel.entity.enums.Shortcode;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +13,9 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -37,4 +36,6 @@ public class Address {
     @Enumerated(EnumType.STRING)
     @Column(name = "shortcode")
     private Shortcode shortCode;
+
+
 }
